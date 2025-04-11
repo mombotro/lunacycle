@@ -1,0 +1,141 @@
+.chart-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .y-axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+  }
+  
+  .y-axis-label {
+    padding-left: 4px;
+  }
+  
+  .x-axis {
+    position: absolute;
+    height: 24px;
+    left: 40px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+  }
+  
+  .x-axis-label {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+  }
+  
+  .x-axis-label.positioned {
+    position: absolute;
+  }
+  
+  .chart-area {
+    position: absolute;
+    inset: 0;
+    left: 40px;
+    top: 0;
+    bottom: 24px;
+    right: 0;
+  }
+  
+  .chart-grid {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  .grid-line {
+    stroke: #E5E7EB;
+    stroke-width: 1;
+  }
+  
+  .data-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    transform: translate(-6px, -6px);
+  }
+  
+  .data-point.period {
+    background-color: var(--color-red-500);
+  }
+  
+  .data-point.fertile {
+    background-color: var(--color-green-500);
+  }
+  
+  .data-point.regular {
+    background-color: var(--color-blue-500);
+  }
+  
+  .data-point.smoothed {
+    box-shadow: 0 0 0 1px white;
+  }
+  
+  .connecting-line {
+    stroke: var(--color-gray-400);
+    stroke-width: 1;
+  }
+  
+  .ovulation-line {
+    stroke: var(--color-purple-500);
+    stroke-width: 2;
+    stroke-dasharray: 5,3;
+  }
+  
+  .chart-legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    margin-top: 0.25rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    margin-right: 4px;
+  }
+  
+  .legend-color.period {
+    background-color: var(--color-red-500);
+  }
+  
+  .legend-color.fertile {
+    background-color: var(--color-green-500);
+  }
+  
+  .legend-color.regular {
+    background-color: var(--color-blue-500);
+  }
+  
+  .legend-line {
+    display: inline-block;
+    width: 16px;
+    border-left: 2px dashed var(--color-purple-500);
+    height: 16px;
+    margin-right: 4px;
+  }
